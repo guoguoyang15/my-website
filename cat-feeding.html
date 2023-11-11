@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cat feeding</title>
+	<style>
+	</style>
+	<link id="pagestyle" rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/function.js"></script>
+	<script>
+		$(function () {
+			var _this1 = null;
+			$('.nav>li').hover(function () {
+				_this1 = $(this);
+				_this1.find('.second-nav').show();
+				var _this2 = null;
+				_this1.find('.second-nav').find('li').hover(function () {
+					_this2 = $(this);
+					_this2.find('.third-nav').show();
+					_this2.find('.third-nav').hover(function () {
+						$(this).show();
+					}, function () {
+						$(this).hide();
+					});
+				}, function () {
+					_this2.find('.third-nav').hide();
+				});
+			}, function () {
+				_this1.find('.second-nav').hide();
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<script src="js/background.js"></script>
+	<div class="header">
+		<ul class="nav">
+			<li><img src="image/catoon-cat.png" width="50" height="50" alt="Cartoon Cat">
+			</li>
+			<li><a href="index.html">Home</a>
+			</li>
+			<li><a href="#">Details</a>
+				<ul class="second-nav">
+					<li><a href="my-passion.html">Me and My Passion</a></li>
+					<li><a href="sitemap.html">Site Map</a></li>
+					<li><a href="image-map.html">Image Map</a></li>
+					<li><a href="cat-gallery.html">Image Gallery</a></li>
+					<li><a href="reflections.html">Reflections</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Information</a>
+				<ul class="second-nav">
+					<li><a href="cat-feeding.html">Cat feeding</a></li>
+					<li><a href="cat-bathing.html">Cat bathing</a></li>
+					<li><a href="cat-playing.html">Playing with cat</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Contact</a>
+				<ul class="second-nav">
+					<li><a href="feedback.html">Feedback Form</a></li>
+				</ul>
+			</li>
+			<li><a href="#">About</a>
+				<ul class="second-nav">
+					<li><a href="source-log.html">Source Log</a></li>
+					<li><a href="validation.html">Validation</a></li>
+					<li><a href="assignment.html">Assignment</a></li>
+					<li><a href="original.html">Original</a></li>
+				</ul>
+			</li><li><a href="#" onclick="switchStyle(event)">CSS Switch</a></li>
+
+		</ul>
+	</div>
+	<script>
+		function switchStyle() {
+			var stylesheet = document.getElementById('pagestyle');
+			if (stylesheet.getAttribute('href') == 'css/style.css') {
+				stylesheet.setAttribute('href', 'css/style2.css');
+			} else {
+				stylesheet.setAttribute('href', 'css/style.css');
+			}
+		}
+	</script>
+	<!--Header End-->
+
+	<h1 style="text-align: center;">Cat Feeding</h1> <!-- style here is the height of the text -->
+
+	<div class="introduction_homepage">
+
+		<p>
+			<img id="Image_left" src="image/Feeding.jpeg" width="300" height="300" class="pic" alt="Image">
+
+		</p>Feeding a cat can be a straightforward process. As a newbie, here are some basic tips to ensure your cat
+		gets the proper nutrition it needs:
+		<p></p>
+		①Choose a high-quality cat food: Look for cat food that is specifically formulated for your cat's life stage and
+		needs. Read the ingredients label carefully to ensure that the food contains high-quality protein sources,
+		vitamins, and minerals.
+		<p></p>
+		②Determine the appropriate feeding amount: The amount of food your cat needs will depend on its age, size, and
+		activity level. Follow the feeding guidelines on the cat food packaging, but adjust as needed based on your
+		cat's individual needs.
+		<p></p>
+		<img id="Image_left1" src="image/Feeding2.jpg" width="300" height="300" class="pic" alt="Image">
+		③Feed your cat on a regular schedule: Cats thrive on routine, so establish a feeding schedule and stick to it.
+		Most cats do well with two meals a day.
+		<p></p>
+		④Provide fresh water: Make sure your cat has access to clean, fresh water at all times. Change the water daily
+		and clean the bowl regularly.
+		<p></p>
+		⑤Avoid giving your cat human food: While it may be tempting to share your food with your cat, many human foods
+		can be harmful to cats. Stick to feeding your cat cat-specific food.
+		<p></p>
+		⑥Monitor your cat's weight: Regularly monitor your cat's weight and adjust its food intake as necessary. An
+		overweight cat can develop health problems, so it's important to keep your cat at a healthy weight.
+	</div>
+	<script src='https://platform-api.sharethis.com/js/sharethis.js#property=6468f41e4b5fef0019be5730&product=sop'
+	async='async'></script>
+<!-- ShareThis BEGIN -->
+<div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+	<p style="text-align: center">
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border: 0; width: 88px; height: 31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+				alt="Valid CSS">
+		</a>
+	</p>
+</body>
+
+</html>

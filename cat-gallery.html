@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gallery</title>
+	<style>
+	</style>
+	<link id="pagestyle" rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/function.js"></script>
+	<script>
+		$(function () {
+			var _this1 = null;
+			$('.nav>li').hover(function () {
+				_this1 = $(this);
+				_this1.find('.second-nav').show();
+				var _this2 = null;
+				_this1.find('.second-nav').find('li').hover(function () {
+					_this2 = $(this);
+					_this2.find('.third-nav').show();
+					_this2.find('.third-nav').hover(function () {
+						$(this).show();
+					}, function () {
+						$(this).hide();
+					});
+				}, function () {
+					_this2.find('.third-nav').hide();
+				});
+			}, function () {
+				_this1.find('.second-nav').hide();
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<script src="js/background.js"></script>
+	<div class="header">
+		<ul class="nav">
+			<li><img src="image/catoon-cat.png" width="50" height="50" alt="Cartoon Cat">
+			</li>
+			<li><a href="index.html">Home</a>
+			</li>
+			<li><a href="#">Details</a>
+				<ul class="second-nav">
+					<li><a href="my-passion.html">Me and My Passion</a></li>
+					<li><a href="sitemap.html">Site Map</a></li>
+					<li><a href="image-map.html">Image Map</a></li>
+					<li><a href="cat-gallery.html">Image Gallery</a></li>
+					<li><a href="reflections.html">Reflections</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Information</a>
+				<ul class="second-nav">
+					<li><a href="cat-feeding.html">Cat feeding</a></li>
+					<li><a href="cat-bathing.html">Cat bathing</a></li>
+					<li><a href="cat-playing.html">Playing with cat</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Contact</a>
+				<ul class="second-nav">
+					<li><a href="feedback.html">Feedback Form</a></li>
+				</ul>
+			</li>
+			<li><a href="#">About</a>
+				<ul class="second-nav">
+					<li><a href="source-log.html">Source Log</a></li>
+					<li><a href="validation.html">Validation</a></li>
+					<li><a href="assignment.html">Assignment</a></li>
+					<li><a href="original.html">Original</a></li>
+				</ul>
+			</li><li><a href="#" onclick="switchStyle(event)">CSS Switch</a></li>
+
+		</ul>
+	</div>
+	<script>
+		function switchStyle() {
+			var stylesheet = document.getElementById('pagestyle');
+			if (stylesheet.getAttribute('href') == 'css/style.css') {
+				stylesheet.setAttribute('href', 'css/style2.css');
+			} else {
+				stylesheet.setAttribute('href', 'css/style.css');
+			}
+		}
+	</script>
+	<!--Header End-->
+
+	<h1 style="text-align: center;">Top 12 Mainstream Breeds of Cats</h1> <!-- style here is the height of the text -->
+
+	<!--/*外层最大容器*/-->
+	<div class="wrap">
+		<!--    /*包裹所有元素的容器*/-->
+		<div class="cube">
+			<!--前面图片 -->
+			<div class="out_front">
+				<img src="image/1.png" class="pic2" alt="Image">
+			</div>
+			<!--后面图片 -->
+			<div class="out_back">
+				<img src="image/2.png" class="pic2" alt="Image">
+			</div>
+			<!--左图片 -->
+			<div class="out_left">
+				<img src="image/3.png" class="pic2" alt="Image">
+			</div>
+			<div class="out_right">
+				<img src="image/4.png" class="pic2" alt="Image">
+			</div>
+			<div class="out_top">
+				<img src="image/5.png" class="pic2" alt="Image">
+			</div>
+			<div class="out_bottom">
+				<img src="image/6.png" class="pic2" alt="Image">
+			</div>
+			<!--小正方体 -->
+			<span class="in_front">
+				<img src="image/7.png" class="in_pic" alt="Image">
+			</span>
+			<span class="in_back">
+				<img src="image/8.png" class="in_pic" alt="Image">
+			</span>
+			<span class="in_left">
+				<img src="image/9.png" class="in_pic" alt="Image">
+			</span>
+			<span class="in_right">
+				<img src="image/10.png" class="in_pic" alt="Image">
+			</span>
+			<span class="in_top">
+				<img src="image/11.png" class="in_pic" alt="Image">
+			</span>
+			<span class="in_bottom">
+				<img src="image/12.png" class="in_pic" alt="Image">
+			</span>
+		</div>
+	</div>
+	
+</body>
+
+</html>
