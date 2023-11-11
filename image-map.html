@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Image map</title>
+	<style>
+	</style>
+	<link id="pagestyle" rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/function.js"></script>
+	<script>
+		$(function () {
+			var _this1 = null;
+			$('.nav>li').hover(function () {
+				_this1 = $(this);
+				_this1.find('.second-nav').show();
+				var _this2 = null;
+				_this1.find('.second-nav').find('li').hover(function () {
+					_this2 = $(this);
+					_this2.find('.third-nav').show();
+					_this2.find('.third-nav').hover(function () {
+						$(this).show();
+					}, function () {
+						$(this).hide();
+					});
+				}, function () {
+					_this2.find('.third-nav').hide();
+				});
+			}, function () {
+				_this1.find('.second-nav').hide();
+			});
+		});
+	</script>
+</head>
+
+<body style="text-align: center">
+	<script src="js/background.js"></script>
+	<div class="header">
+		<ul class="nav">
+			<li><img src="image/catoon-cat.png" width="50" height="50" alt="Cartoon Cat">
+			</li>
+			<li><a href="index.html">Home</a>
+			</li>
+			<li><a href="#">Details</a>
+				<ul class="second-nav">
+					<li><a href="my-passion.html">Me and My Passion</a></li>
+					<li><a href="sitemap.html">Site Map</a></li>
+					<li><a href="image-map.html">Image Map</a></li>
+					<li><a href="cat-gallery.html">Image Gallery</a></li>
+					<li><a href="reflections.html">Reflections</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Information</a>
+				<ul class="second-nav">
+					<li><a href="cat-feeding.html">Cat feeding</a></li>
+					<li><a href="cat-bathing.html">Cat bathing</a></li>
+					<li><a href="cat-playing.html">Playing with cat</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Contact</a>
+				<ul class="second-nav">
+					<li><a href="feedback.html">Feedback Form</a></li>
+				</ul>
+			</li>
+			<li><a href="#">About</a>
+				<ul class="second-nav">
+					<li><a href="source-log.html">Source Log</a></li>
+					<li><a href="validation.html">Validation</a></li>
+					<li><a href="assignment.html">Assignment</a></li>
+					<li><a href="original.html">Original</a></li>
+				</ul>
+			</li><li><a href="#" onclick="switchStyle(event)">CSS Switch</a></li>
+
+		</ul>
+	</div>
+	<script>
+		function switchStyle() {
+			var stylesheet = document.getElementById('pagestyle');
+			if (stylesheet.getAttribute('href') == 'css/style.css') {
+				stylesheet.setAttribute('href', 'css/style2.css');
+			} else {
+				stylesheet.setAttribute('href', 'css/style.css');
+			}
+		}
+	</script>
+		<h1 style="text-align: center;">
+			Image map
+		</h1>
+	<img src="image/Image-map.png" alt="ImageMap" usemap="#image-map">
+	<map name="image-map">
+		<area target="_blank" alt="Eat" title="" href="cat-feeding.html" coords="36,26,230,284" shape="rect">
+		<area target="_blank" alt="Bath" title="" href="cat-bathing.html" coords="242,25,441,284" shape="rect">
+		<area target="_blank" alt="Play" title="" href="cat-playing.html" coords="459,30,650,286" shape="rect">
+	</map>
+	<script src='https://platform-api.sharethis.com/js/sharethis.js#property=6468f41e4b5fef0019be5730&product=sop'
+	async='async'></script>
+<!-- ShareThis BEGIN -->
+<div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+	<p style="text-align: center">
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border: 0; width: 88px; height: 31px"
+				src="http://jigsaw.w3.org/css-validator/images/vcss"
+				alt="Valid CSS">
+		</a>
+	</p>
+</body>
+
+</html>

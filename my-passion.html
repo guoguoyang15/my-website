@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>my passion</title>
+	<style>
+	</style>
+	<link id="pagestyle" rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/function.js"></script>
+	<script>
+		$(function () {
+			var _this1 = null;
+			$('.nav>li').hover(function () {
+				_this1 = $(this);
+				_this1.find('.second-nav').show();
+				var _this2 = null;
+				_this1.find('.second-nav').find('li').hover(function () {
+					_this2 = $(this);
+					_this2.find('.third-nav').show();
+					_this2.find('.third-nav').hover(function () {
+						$(this).show();
+					}, function () {
+						$(this).hide();
+					});
+				}, function () {
+					_this2.find('.third-nav').hide();
+				});
+			}, function () {
+				_this1.find('.second-nav').hide();
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<script src="js/background.js"></script>
+	<div class="header">
+		<ul class="nav">
+			<li><img src="image/catoon-cat.png" width="50" height="50" alt="Cartoon Cat">
+			</li>
+			<li><a href="index.html">Home</a>
+			</li>
+			<li><a href="#">Details</a>
+				<ul class="second-nav">
+					<li><a href="my-passion.html">Me and My Passion</a></li>
+					<li><a href="sitemap.html">Site Map</a></li>
+					<li><a href="image-map.html">Image Map</a></li>
+					<li><a href="cat-gallery.html">Image Gallery</a></li>
+					<li><a href="reflections.html">Reflections</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Information</a>
+				<ul class="second-nav">
+					<li><a href="cat-feeding.html">Cat feeding</a></li>
+					<li><a href="cat-bathing.html">Cat bathing</a></li>
+					<li><a href="cat-playing.html">Playing with cat</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Contact</a>
+				<ul class="second-nav">
+					<li><a href="feedback.html">Feedback Form</a></li>
+				</ul>
+			</li>
+			<li><a href="#">About</a>
+				<ul class="second-nav">
+					<li><a href="source-log.html">Source Log</a></li>
+					<li><a href="validation.html">Validation</a></li>
+					<li><a href="assignment.html">Assignment</a></li>
+					<li><a href="original.html">Original</a></li>
+				</ul>
+			</li>
+			<li><a href="#" onclick="switchStyle(event)">CSS Switch</a></li>
+
+		</ul>
+	</div>
+	<script>
+		function switchStyle() {
+			var stylesheet = document.getElementById('pagestyle');
+			if (stylesheet.getAttribute('href') == 'css/style.css') {
+				stylesheet.setAttribute('href', 'css/style2.css');
+			} else {
+				stylesheet.setAttribute('href', 'css/style.css');
+			}
+		}
+	</script>
+
+		<h1 style="text-align: center;">About Me</h1> <!-- style here is the height of the text -->
+
+<div class="introduction_homepage">
+<p>
+	
+I am a person who likes to deal with small animals, especially all kinds of small cats, their every move makes me feel full of fun
+</p>
+
+
+</div>
+		<h1 style="text-align: center;">My Passion</h1> <!-- style here is the height of the text -->
+<div class="introduction_homepage">
+
+<p>
+	<img id="Image_left" src="image/ME.jpg" alt="Description of the image" width="300" height="400">
+As one of the most common pets today, cats are treated as part of the family members by countless pet lovers and play a vital role in a harmonious family atmosphere. The concept of having a cat as a young person's first pet is becoming more and more popular throughout the world. After all, cats can take care of themselves during the time their owners are away, even if the owner is away for half a month, because they can stand to be lonely. And when the owner comes home, this cute little pet can be the first to give the most affectionate greetings to its adopter and share the day's joys and sorrows together, there is nothing better than that, right? As a cat slave and a new cat owner, I am happy to share some photos of my pet cat "Sydney", a purebred American Shorthair, who has just celebrated her first birthday recently. In addition, in order to make the website more meaningful and to reflect the sense of responsibility of cat owners, I will also update from time to time some of the problems that new cat owners are likely to encounter, as well as the relevant solutions, with relevant pictures.
+	</p>
+</div>
+<script src='https://platform-api.sharethis.com/js/sharethis.js#property=6468f41e4b5fef0019be5730&product=sop'
+async='async'></script>
+<!-- ShareThis BEGIN -->
+<div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+<p style="text-align: center">
+	<a href="http://jigsaw.w3.org/css-validator/check/referer">
+		<img style="border: 0; width: 88px; height: 31px"
+			src="http://jigsaw.w3.org/css-validator/images/vcss"
+			alt="Valid CSS">
+	</a>
+</p>
+</body>
+
+</html>

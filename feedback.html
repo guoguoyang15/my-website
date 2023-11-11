@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cat playing</title>
+	<style>
+	</style>
+	<link id="pagestyle" rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/function.js"></script>
+	<script>
+		$(function () {
+			var _this1 = null;
+			$('.nav>li').hover(function () {
+				_this1 = $(this);
+				_this1.find('.second-nav').show();
+				var _this2 = null;
+				_this1.find('.second-nav').find('li').hover(function () {
+					_this2 = $(this);
+					_this2.find('.third-nav').show();
+					_this2.find('.third-nav').hover(function () {
+						$(this).show();
+					}, function () {
+						$(this).hide();
+					});
+				}, function () {
+					_this2.find('.third-nav').hide();
+				});
+			}, function () {
+				_this1.find('.second-nav').hide();
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+	<script src="js/background.js"></script>
+	<div class="header">
+		<ul class="nav">
+			<li><img src="image/catoon-cat.png" width="50" height="50" alt="Cartoon Cat">
+			</li>
+			<li><a href="index.html">Home</a>
+			</li>
+			<li><a href="#">Details</a>
+				<ul class="second-nav">
+					<li><a href="my-passion.html">Me and My Passion</a></li>
+					<li><a href="sitemap.html">Site Map</a></li>
+					<li><a href="image-map.html">Image Map</a></li>
+					<li><a href="cat-gallery.html">Image Gallery</a></li>
+					<li><a href="reflections.html">Reflections</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Information</a>
+				<ul class="second-nav">
+					<li><a href="cat-feeding.html">Cat feeding</a></li>
+					<li><a href="cat-bathing.html">Cat bathing</a></li>
+					<li><a href="cat-playing.html">Playing with cat</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Contact</a>
+				<ul class="second-nav">
+					<li><a href="feedback.html">Feedback Form</a></li>
+				</ul>
+			</li>
+			<li><a href="#">About</a>
+				<ul class="second-nav">
+					<li><a href="source-log.html">Source Log</a></li>
+					<li><a href="validation.html">Validation</a></li>
+					<li><a href="assignment.html">Assignment</a></li>
+					<li><a href="original.html">Original</a></li>
+				</ul>
+			</li><li><a href="#" onclick="switchStyle(event)">CSS Switch</a></li>
+
+		</ul>
+	</div>
+	<script>
+		function switchStyle() {
+			var stylesheet = document.getElementById('pagestyle');
+			if (stylesheet.getAttribute('href') == 'css/style.css') {
+				stylesheet.setAttribute('href', 'css/style2.css');
+			} else {
+				stylesheet.setAttribute('href', 'css/style.css');
+			}
+		}
+	</script>
+	<h1 style="text-align: center;">
+		Feedback Form
+	</h1>
+	<div style="text-align: center;" id="feedbackform">
+		<form enctype="multipart/form-data" action="mailto:u7580614@anu.edu.au?subject=MyFeedback" method="post">
+			<p>
+				Your gender
+			</p>
+			<p>
+				<input type="radio" name="Gender" value="Male">
+				Male
+				<input type="radio" name="Gender" value="Female">
+				Female
+				<input type="radio" name="Gender" value="Other">
+				Other
+				<input type="radio" name="Gender" value="Other">
+				Prefer not to say
+			</p>
+			<hr>
+			<p>
+				Do you have a cat?
+			</p>
+			<p>
+				<input type="radio" name="Cat" value="Have">
+				Yes
+				<input type="radio" name="Cat" value="Not">
+				No
+				<hr>
+			<p>
+				Do you know much about cat-related knowledge?
+			</p>
+			<p>
+				<input type="radio" name="knowledge" value="Much">
+				Much
+				<input type="radio" name="knowledge" value="Some">
+				Some
+				<input type="radio" name="knowledge" value="Little">
+				Little
+				<input type="radio" name="knowledge" value="None">
+				None
+			</p>
+			<hr>
+			<p>
+				Will you come back again?
+			</p>
+			<p>
+				<input type="radio" name="Come back or not" value="Yes">
+				💗💗💗
+				<input type="radio" name="Come back or not" value="Maybe">
+				💗
+				<input type="radio" name="Come back or not" value="No">
+				💔
+			</p>
+			<hr>
+			<p>
+				What do you think of this site?
+			</p>
+			<textarea rows="4" name="Feedback" wrap="hard" cols="20"></textarea>
+			<hr>
+			<p>
+				<input type="submit" value="Submit">
+				<input type="reset" value="Clear">
+			</p>
+			<!-- Place <div> tag where you want the feed to appear -->
+			<div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank"
+					class="crt-logo crt-tag">Powered by Curator.io</a></div>
+			<!-- The Javascript can be moved to the end of the html page before the </body> tag -->
+			<script>
+				/* curator-feed-default-feed-layout */
+				(function () {
+					var i, e, d = document, s = "script"; i = d.createElement("script"); i.async = 1; i.charset = "UTF-8";
+					i.src = "https://cdn.curator.io/published/48ddf557-3c16-4c25-97da-2c7899dd2137.js";
+					e = d.getElementsByTagName(s)[0]; e.parentNode.insertBefore(i, e);
+				})();
+			</script>
+			<div class="sharethis-inline-share-buttons"></div>
+		</form>
+	</div>
+	
+	<p style="text-align: center">
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border: 0; width: 88px; height: 31px"
+				src="http://jigsaw.w3.org/css-validator/images/vcss"
+				alt="Valid CSS">
+		</a>
+	</p>
+</body>
+
+</html>

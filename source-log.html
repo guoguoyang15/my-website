@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Source log</title>
+	<style>
+	</style>
+	<link id="pagestyle" rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/function.js"></script>
+	<script>
+		$(function () {
+			var _this1 = null;
+			$('.nav>li').hover(function () {
+				_this1 = $(this);
+				_this1.find('.second-nav').show();
+				var _this2 = null;
+				_this1.find('.second-nav').find('li').hover(function () {
+					_this2 = $(this);
+					_this2.find('.third-nav').show();
+					_this2.find('.third-nav').hover(function () {
+						$(this).show();
+					}, function () {
+						$(this).hide();
+					});
+				}, function () {
+					_this2.find('.third-nav').hide();
+				});
+			}, function () {
+				_this1.find('.second-nav').hide();
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<script src="js/background.js"></script>
+	<div class="header">
+		<ul class="nav">
+			<li><img src="image/catoon-cat.png" width="50" height="50" alt="Cartoon Cat">
+			</li>
+			<li><a href="index.html">Home</a>
+			</li>
+			<li><a href="#">Details</a>
+				<ul class="second-nav">
+					<li><a href="my-passion.html">Me and My Passion</a></li>
+					<li><a href="sitemap.html">Site Map</a></li>
+					<li><a href="image-map.html">Image Map</a></li>
+					<li><a href="cat-gallery.html">Image Gallery</a></li>
+					<li><a href="reflections.html">Reflections</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Information</a>
+				<ul class="second-nav">
+					<li><a href="cat-feeding.html">Cat feeding</a></li>
+					<li><a href="cat-bathing.html">Cat bathing</a></li>
+					<li><a href="cat-playing.html">Playing with cat</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Contact</a>
+				<ul class="second-nav">
+					<li><a href="feedback.html">Feedback Form</a></li>
+				</ul>
+			</li>
+			<li><a href="#">About</a>
+				<ul class="second-nav">
+					<li><a href="source-log.html">Source Log</a></li>
+					<li><a href="validation.html">Validation</a></li>
+					<li><a href="assignment.html">Assignment</a></li>
+					<li><a href="original.html">Original</a></li>
+				</ul>
+			</li><li><a href="#" onclick="switchStyle(event)">CSS Switch</a></li>
+
+		</ul>
+	</div>
+	<script>
+		function switchStyle() {
+			var stylesheet = document.getElementById('pagestyle');
+			if (stylesheet.getAttribute('href') == 'css/style.css') {
+				stylesheet.setAttribute('href', 'css/style2.css');
+			} else {
+				stylesheet.setAttribute('href', 'css/style.css');
+			}
+		}
+	</script>
+	<h1 style="text-align: center;">
+		Source Log
+	</h1>
+
+	<table style="text-align: center; margin-left: auto; margin-right: auto; border: 1px solid black;">
+
+		<tr>
+			<td style="border: 1px solid black;">
+				<h2>Original</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>Type</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>How Altered or Justification</h2>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid black;">
+				<h2><a href="https://www.runoob.com">https://www.runoob.com</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>website</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>Use to learn some basic HTML and CSS statements</h2>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid black;">
+				<h2><a href="https://getbootstrap.com">https://getbootstrap.com</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>website</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>Provide basic website templates to be used as reference</h2>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid black;">
+				<h2>cat video</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>video</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>Shot at home, the provider is the cat Sydney</h2>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid black;">
+				<h2>cat photos</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>image</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>Shot at home, the provider is the cat Sydney</h2>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid black;">
+				<h2><a href="https://www.wikipedia.org/">https://www.wikipedia.org/</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>image</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>Provides photos of breed cats and some advice on how to bathe, feed and play with them</h2>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid black;">
+				<h2><a href="https://edu.csdn.net/">https://edu.csdn.net/</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>javascript code</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>Basic style provided, individual modifications required for specific styles</h2>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid black;">
+				<h2><a href="https://learnku.com/articles/65552">https://learnku.com/articles/65552</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>HTML and CSS code</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>Provide editable H5 source code</h2>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid black;">
+				<h2><a href="https://platform.sharethis.com/apps">https://platform.sharethis.com/apps</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>Javascript code</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>Provide social sharing buttons</h2>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid black;">
+				<h2><a href="https://app.curator.io/organize">https://app.curator.io/organize</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>Javascript code</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>Provides an interface for viewing cat-related Youtube videos</h2>
+			</td>
+		</tr>
+
+		
+	</table>
+	<script src='https://platform-api.sharethis.com/js/sharethis.js#property=6468f41e4b5fef0019be5730&product=sop'
+	async='async'></script>
+<!-- ShareThis BEGIN -->
+<div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+	<p style="text-align: center">
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border: 0; width: 88px; height: 31px"
+				src="http://jigsaw.w3.org/css-validator/images/vcss"
+				alt="Valid CSS">
+		</a>
+	</p>
+</body>
+
+</html>

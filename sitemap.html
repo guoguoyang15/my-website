@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Site Map</title>
+	<style>
+	</style>
+	<link id="pagestyle" rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/function.js"></script>
+	<script>
+		$(function () {
+			var _this1 = null;
+			$('.nav>li').hover(function () {
+				_this1 = $(this);
+				_this1.find('.second-nav').show();
+				var _this2 = null;
+				_this1.find('.second-nav').find('li').hover(function () {
+					_this2 = $(this);
+					_this2.find('.third-nav').show();
+					_this2.find('.third-nav').hover(function () {
+						$(this).show();
+					}, function () {
+						$(this).hide();
+					});
+				}, function () {
+					_this2.find('.third-nav').hide();
+				});
+			}, function () {
+				_this1.find('.second-nav').hide();
+			});
+		});
+	</script>
+	<script src='https://platform-api.sharethis.com/js/sharethis.js#property=6468f41e4b5fef0019be5730&product=sop'
+		async='async'></script>
+
+</head>
+
+<body>
+	<script src="js/background.js"></script>
+	<div class="header">
+		<ul class="nav">
+			<li><img src="image/catoon-cat.png" width="50" height="50" alt="Cartoon Cat">
+			</li>
+			<li><a href="index.html">Home</a>
+			</li>
+			<li><a href="#">Details</a>
+				<ul class="second-nav">
+					<li><a href="my-passion.html">Me and My Passion</a></li>
+					<li><a href="sitemap.html">Site Map</a></li>
+					<li><a href="image-map.html">Image Map</a></li>
+					<li><a href="cat-gallery.html">Image Gallery</a></li>
+					<li><a href="reflections.html">Reflections</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Information</a>
+				<ul class="second-nav">
+					<li><a href="cat-feeding.html">Cat feeding</a></li>
+					<li><a href="cat-bathing.html">Cat bathing</a></li>
+					<li><a href="cat-playing.html">Playing with cat</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Contact</a>
+				<ul class="second-nav">
+					<li><a href="feedback.html">Feedback Form</a></li>
+				</ul>
+			</li>
+			<li><a href="#">About</a>
+				<ul class="second-nav">
+					<li><a href="source-log.html">Source Log</a></li>
+					<li><a href="validation.html">Validation</a></li>
+					<li><a href="assignment.html">Assignment</a></li>
+					<li><a href="original.html">Original</a></li>
+				</ul>
+			</li><li><a href="#" onclick="switchStyle(event)">CSS Switch</a></li>
+
+		</ul>
+	</div>
+	<script>
+		function switchStyle() {
+			var stylesheet = document.getElementById('pagestyle');
+			if (stylesheet.getAttribute('href') == 'css/style.css') {
+				stylesheet.setAttribute('href', 'css/style2.css');
+			} else {
+				stylesheet.setAttribute('href', 'css/style.css');
+			}
+		}
+	</script>
+	<h1 style="text-align: center;">
+		Site Map
+	</h1>
+
+	<table style="text-align: center; margin-left: auto; margin-right: auto; border: 1px solid black;">
+		<tr>
+			<td style="border: 1px solid black;">
+				<h2>Home</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>Details</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>Information</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>Contact</h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2>About</h2>
+			</td>
+
+		</tr>
+		<tr>
+			<td style="border: 1px solid black;">
+				<h2><a href="index.html">About My Cat</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2><a href="my-passion.html">My Passion</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2><a href="cat-feeding.html">cat-feeding</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2><a href="feedback.html">Feedback</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2><a href="source-log.html">source-log</a></h2>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid black;">
+				<h2></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2><a href="image-map.html">image-map</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2><a href="cat-bathing.html">cat-bathing</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2><a href="validation.html">validation</a></h2>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid black;">
+				<h2></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2><a href="cat-gallery.html">cat-gallery</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2><a href="cat-playing.html">cat-playing</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2><a href="assignment.html">assignment</a></h2>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid black;">
+				<h2></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2><a href="reflections.html">reflections</a></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2></h2>
+			</td>
+			<td style="border: 1px solid black;">
+				<h2><a href="original.html">original</a></h2>
+			</td>
+		</tr>
+	</table>
+
+
+	<div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+
+	
+	<p style="text-align: center">
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border: 0; width: 88px; height: 31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+				alt="Valid CSS">
+		</a>
+	</p>
+</body>
+
+</html>
