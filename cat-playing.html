@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cat playing</title>
+	<style>
+	</style>
+	<link id="pagestyle" rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/function.js"></script>
+	<script>
+		$(function () {
+			var _this1 = null;
+			$('.nav>li').hover(function () {
+				_this1 = $(this);
+				_this1.find('.second-nav').show();
+				var _this2 = null;
+				_this1.find('.second-nav').find('li').hover(function () {
+					_this2 = $(this);
+					_this2.find('.third-nav').show();
+					_this2.find('.third-nav').hover(function () {
+						$(this).show();
+					}, function () {
+						$(this).hide();
+					});
+				}, function () {
+					_this2.find('.third-nav').hide();
+				});
+			}, function () {
+				_this1.find('.second-nav').hide();
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<script src="js/background.js"></script>
+	<div class="header">
+		<ul class="nav">
+			<li><img src="image/catoon-cat.png" width="50" height="50" alt="Cartoon Cat">
+			</li>
+			<li><a href="index.html">Home</a>
+			</li>
+			<li><a href="#">Details</a>
+				<ul class="second-nav">
+					<li><a href="my-passion.html">Me and My Passion</a></li>
+					<li><a href="sitemap.html">Site Map</a></li>
+					<li><a href="image-map.html">Image Map</a></li>
+					<li><a href="cat-gallery.html">Image Gallery</a></li>
+					<li><a href="reflections.html">Reflections</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Information</a>
+				<ul class="second-nav">
+					<li><a href="cat-feeding.html">Cat feeding</a></li>
+					<li><a href="cat-bathing.html">Cat bathing</a></li>
+					<li><a href="cat-playing.html">Playing with cat</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Contact</a>
+				<ul class="second-nav">
+					<li><a href="feedback.html">Feedback Form</a></li>
+				</ul>
+			</li>
+			<li><a href="#">About</a>
+				<ul class="second-nav">
+					<li><a href="source-log.html">Source Log</a></li>
+					<li><a href="validation.html">Validation</a></li>
+					<li><a href="assignment.html">Assignment</a></li>
+					<li><a href="original.html">Original</a></li>
+				</ul>
+			</li><li><a href="#" onclick="switchStyle(event)">CSS Switch</a></li>
+
+		</ul>
+	</div>
+	<script>
+		function switchStyle() {
+			var stylesheet = document.getElementById('pagestyle');
+			if (stylesheet.getAttribute('href') == 'css/style.css') {
+				stylesheet.setAttribute('href', 'css/style2.css');
+			} else {
+				stylesheet.setAttribute('href', 'css/style.css');
+			}
+		}
+	</script>
+	<!--Header End-->
+
+	<h1 style="text-align: center;">Cat playing</h1> <!-- style here is the height of the text -->
+
+	<div class="introduction_homepage">
+
+		<p>
+			<img id="Image_left" src="image/Playing.jpg" width="300" height="300" class="pic" alt="Playing">
+
+		</p>Playing with your cat is not only fun, but it also provides exercise and mental stimulation, which is
+		important for their overall health and wellbeing. Here are some tips for a newbie on how to play with their cat:
+		<p></p>
+		①Choose the right toys: Cats have different preferences when it comes to toys, so try out a few different types
+		to see what your cat likes. Some popular options include feather wands, balls, and toy mice.
+		<p></p>
+		②Set aside dedicated playtime: Set aside a few minutes each day to play with your cat. This will help establish
+		a routine and ensure that your cat gets the exercise and mental stimulation they need.
+		<p></p>
+		<img id="Image_left_1" src="image/Playing2.jpeg" width="300" height="300" class="pic" alt="Playing">
+		③Let your cat take the lead: Follow your cat's cues when playing. Some cats prefer chasing toys, while others
+		enjoy pouncing or batting at them. Let your cat take the lead and adapt your play style accordingly.
+		<p></p>
+		④Use interactive toys: Interactive toys, such as puzzle feeders or treat-dispensing balls, can provide mental
+		stimulation and encourage your cat to be more active.
+		<p></p>
+		⑤Keep it safe: Always supervise your cat during playtime and ensure that any toys you use are safe and free of
+		small parts that could be swallowed.
+		<p></p>
+		⑥End on a positive note: End playtime on a positive note by giving your cat a treat or a favorite toy to play
+		with on their own.
+
+	</div>
+	<script src='https://platform-api.sharethis.com/js/sharethis.js#property=6468f41e4b5fef0019be5730&product=sop'
+	async='async'></script>
+<!-- ShareThis BEGIN -->
+<div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+	<p style="text-align: center">
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border: 0; width: 88px; height: 31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+				alt="Valid CSS">
+		</a>
+	</p>
+</body>
+
+</html>
